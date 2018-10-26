@@ -14,6 +14,7 @@
 		83B02FC4217EB5AC00889FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B02FC2217EB5AC00889FBD /* LaunchScreen.storyboard */; };
 		83B02FCF217EB5AC00889FBD /* MovieSauceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B02FCE217EB5AC00889FBD /* MovieSauceTests.swift */; };
 		83B02FDA217EB5AC00889FBD /* MovieSauceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B02FD9217EB5AC00889FBD /* MovieSauceUITests.swift */; };
+		83EC71662182A16100F44F42 /* MovieDataRetrieval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EC71652182A16100F44F42 /* MovieDataRetrieval.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		83B02FD5217EB5AC00889FBD /* MovieSauceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieSauceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B02FD9217EB5AC00889FBD /* MovieSauceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSauceUITests.swift; sourceTree = "<group>"; };
 		83B02FDB217EB5AC00889FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83EC71652182A16100F44F42 /* MovieDataRetrieval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataRetrieval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				83B02FB9217EB5AC00889FBD /* AppDelegate.swift */,
 				83B02FBB217EB5AC00889FBD /* ViewController.swift */,
+				83EC71652182A16100F44F42 /* MovieDataRetrieval.swift */,
 				83B02FBD217EB5AC00889FBD /* Main.storyboard */,
 				83B02FC0217EB5AC00889FBD /* Assets.xcassets */,
 				83B02FC2217EB5AC00889FBD /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EC71662182A16100F44F42 /* MovieDataRetrieval.swift in Sources */,
 				83B02FBC217EB5AC00889FBD /* ViewController.swift in Sources */,
 				83B02FBA217EB5AC00889FBD /* AppDelegate.swift in Sources */,
 			);
