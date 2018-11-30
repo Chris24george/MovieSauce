@@ -40,12 +40,14 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.frame = self.view.frame
         newDatabase()
         let critics = matchCriticWithUser(with: movieTitles, and: userRating)
+        print("Critic List")
         print("1. ", critics[0])
         print("2. ", critics[1])
         print("3. ", critics[2])
-        let movieRecommendations = getMovieRecommendationsList(from: items, with: "Katie Walsh")
-        for movie in movieRecommendations {
-            print(movie.title!)
+        let movieRecommendations = getMovieRecommendationsList(from: items, with: "Katie Walsh", with: "Horror")
+        print("Movie Recommendation List")
+        for index in 1...movieRecommendations.count {
+            print("\(index). ", movieRecommendations[index-1].title!, " ", movieRecommendations[index-1].genre!)
         }
         // Do any additional setup after loading the view.
     }
@@ -113,13 +115,24 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return criticToRatings.sorted(by: { leastSquares(between: $0.value, and: userRatings) < leastSquares(between: $1.value, and: userRating) }).map({ $0.key })
     }
     
-    func getMovieRecommendationsList(from movie_data_list: Results<movie_data>, with critic: String) -> [movie_data] {
+    func getMovieRecommendationsList(from movie_data_list: Results<movie_data>, with critic: String, with genre: String? = nil) -> [movie_data] {
         
         var movie_recommendations_list: [movie_data] = []
         
-        for movie in movie_data_list  {
-            if movie.criticName! == critic {
-                movie_recommendations_list.append(movie)
+        if (genre == nil) {
+            for movie in movie_data_list  {
+                if movie.criticName! == critic {
+                    movie_recommendations_list.append(movie)
+                }
+            }
+        }
+        else {
+            for movie in movie_data_list  {
+                if movie.genre != nil {
+                    if movie.criticName! == critic && movie.genre!.range(of: genre!) != nil {
+                        movie_recommendations_list.append(movie)
+                    }
+                }
             }
         }
         
